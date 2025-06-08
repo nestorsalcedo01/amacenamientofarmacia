@@ -1,319 +1,343 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,
-initial-scale=1.0">
-<title>Resumen: Disposición 3475/2005</title>
-<!-- Carga de Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- Carga de la fuente Inter de Google Fonts -->
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;
-700&display=swap" rel="stylesheet">
-<style>
-/* Estilo base para el cuerpo, usando la fuente Inter y un
-comportamiento de desplazamiento suave */
-body {
-font-family: 'Inter'
-scroll-behavior: smooth;
-, sans-serif;
-}
-/* Ajuste para el desplazamiento suave al anclar a secciones
-con un encabezado fijo */
-.section-anchor:before {
-content: "";
-display: block;
-height: 60px; /* Altura del encabezado fijo para el ajuste
-*/
-margin-top: -60px; /* Compensa la altura del encabezado */
-visibility: hidden;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa: Disposición ANMAT 3475/05 - BPD Farmacéutica</title>
+    <style>
+        /* --- Fuentes y Estilos Globales --- */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #005A9C;
+            --secondary-color: #00AEEF;
+            --background-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg-color: #ffffff;
+            --shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* --- Encabezado y Navegación --- */
+        .hero-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: var(--card-bg-color);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 0 1rem;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: var(--primary-color);
+            padding: 1rem;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* --- Contenido Principal y Secciones --- */
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding-top: 4rem; /* Espacio para que el nav no tape el título */
+            margin-top: -4rem; /* Contrarresta el padding */
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* --- Estilo de Tarjetas --- */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg-color);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
+            list-style-type: none; /* Quitamos los puntos por defecto */
+            padding-left: 0;
+        }
+
+        .card ul li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card ul li::before {
+            content: '✓'; /* Usamos un checkmark como viñeta */
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .citation {
+            font-size: 0.75rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* --- Pie de Página --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        /* --- Responsividad --- */
+        @media (max-width: 768px) {
+            .hero-header h1 {
+                font-size: 2rem;
+            }
+            .nav-container {
+                flex-direction: column;
+            }
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-<!-- Encabezado de la página -->
-<header class="bg-gradient-to-r from-blue-600 to-indigo-700
-text-white p-4 shadow-lg sticky top-0 z-10">
-<div class="container mx-auto flex flex-col md:flex-row
-justify-between items-center">
-<h1 class="text-2xl md:text-3xl font-bold mb-2
-md:mb-0">Disposición 3475/2005</h1>
-<!-- Menú de navegación principal -->
-<nav class="flex flex-wrap gap-2 text-sm md:text-base">
-<a href="#introduccion" class="p-2 hover:bg-blue-700
-rounded-lg transition-colors duration-200">Introducción</a>
-<a href="#personal" class="p-2 hover:bg-blue-700
-rounded-lg transition-colors duration-200">Personal</a>
-<a href="#instalaciones" class="p-2 hover:bg-blue-700
-rounded-lg transition-colors duration-200">Instalaciones</a>
-<a href="#equipamiento" class="p-2 hover:bg-blue-700
-rounded-lg transition-colors duration-200">Equipamiento</a>
-<a href="#operaciones" class="p-2 hover:bg-blue-700
-rounded-lg transition-colors duration-200">Operaciones Clave</a>
-<a href="#condiciones-especificas" class="p-2
-hover:bg-blue-700 rounded-lg transition-colors
-duration-200">Condiciones Específicas</a>
-</nav>
-</div>
-</header>
-<!-- Contenido principal de la página -->
-<main class="container mx-auto px-4 py-8 max-w-4xl">
-<!-- Sección de Introducción -->
-<section id="introduccion" class="bg-white p-6 rounded-xl
-shadow-md mb-8 section-anchor">
-<h2 class="text-3xl font-semibold text-blue-700
-mb-4">Introducción</h2>
-<p class="text-lg leading-relaxed">
-La <strong>Disposición 3475/2005</strong> de la ANMAT
-aprueba el <strong>"Reglamento Técnico Mercosur sobre Buenas Prácticas
-de Distribución de Productos Farmacéuticos" (Resolución Mercosur GMC
-N° 49/02)</strong>.
-</p>
-<p class="text-lg leading-relaxed mt-3">
-El objetivo principal de este reglamento es asegurar
-que los productos farmacéuticos mantengan su <strong>calidad, eficacia
-y seguridad</strong> desde su fabricación hasta su dispensación al
-público, regulando estrictamente su distribución, almacenamiento,
-transporte y manipulación.
-</p>
-</section>
-<!-- Sección de Personal -->
-<section id="personal" class="bg-white p-6 rounded-xl
-shadow-md mb-8 section-anchor">
-<h2 class="text-3xl font-semibold text-blue-700
-mb-4">Personal</h2>
-<ul class="list-disc list-inside space-y-2 text-lg
-leading-relaxed">
-<li>Debe ser suficiente, calificado y **entrenado** en
-Buenas Prácticas de Distribución.</li>
-<li>Las responsabilidades deben estar **claramente
-definidas** y registradas por escrito.</li>
-<li>Es obligatorio contar con un **Director
-Técnico/Farmacéutico Responsable**
-.</li>
-<li>Prohibido fumar, comer, beber (excepto agua en
-área específica), mascar, o tener objetos personales en áreas de
-manejo de productos.</li>
-<li>El personal debe usar **uniformes
-adecuados**
-.</li>
-<li>Exámenes médicos periódicos.</li>
-</ul>
-</section>
-<!-- Sección de Instalaciones y Áreas -->
-<section id="instalaciones" class="bg-white p-6 rounded-xl
-shadow-md mb-8 section-anchor">
-<h2 class="text-3xl font-semibold text-blue-700
-mb-4">Instalaciones y Áreas</h2>
-<p class="text-lg leading-relaxed mb-4">
-Los edificios deben facilitar el mantenimiento,
-limpieza y operaciones, con espacio suficiente para el flujo de
-personal y materiales, evitando la mezcla de productos o lotes.
-</p>
-<h3 class="text-2xl font-medium text-blue-600 mb-3">Áreas
-Necesarias:</h3>
-<ul class="list-disc list-inside space-y-2 text-lg
-leading-relaxed">
-<li>**Recepción**: Separada del almacenamiento,
-protegida de condiciones climáticas adversas.</li>
-<li>**Almacenamiento**: General, de productos
-termolábiles, de productos sujetos a control especial, de
-inmunobiológicos, etc. Con capacidad para almacenamiento
-racional.</li>
-<li>**Expedición**
-.</li>
-<li>**Administración**
-.</li>
-<li>**Devolución/retiro del mercado**
-.</li>
-<li>**Áreas auxiliares**: Salas de descanso,
-vestuarios, lavatorios y sanitarios (sin comunicación directa con
-áreas de almacenamiento).</li>
-</ul>
-<p class="text-lg leading-relaxed mt-4">
-La **iluminación, ventilación, temperatura y humedad**
-deben ser controladas y registradas constantemente. Los interiores
-deben ser lisos, sin rajaduras, y con protecciones contra roedores,
-aves e insectos.
-</p>
-<p class="text-lg leading-relaxed mt-2">
-Se requiere limpieza constante de locales y
-proximidades, con eliminación segura e higiénica de desechos.
-</p>
-</section>
-<!-- Sección de Equipamiento -->
-<section id="equipamiento" class="bg-white p-6 rounded-xl
-shadow-md mb-8 section-anchor">
-<h2 class="text-3xl font-semibold text-blue-700
-mb-4">Equipamiento</h2>
-<ul class="list-disc list-inside space-y-2 text-lg
-leading-relaxed">
-<li>Todo el equipamiento debe ser **apropiado para su
-uso**
-.</li>
-<li>Equipos de control y registro de temperatura y
-humedad deben estar **debidamente calibrados**
-.</li>
-<li>Medidas rigurosas para la **prevención y combate
-de incendios**
-, con personal entrenado.</li>
-<li>Se recomienda una comisión interna para la
-prevención de accidentes.</li>
-</ul>
-</section>
-<!-- Sección de Operaciones Clave -->
-<section id="operaciones" class="bg-white p-6 rounded-xl
-shadow-md mb-8 section-anchor">
-<h2 class="text-3xl font-semibold text-blue-700
-mb-4">Operaciones Clave</h2>
-<h3 class="text-2xl font-medium text-blue-600
-mb-3">Recepción:</h3>
-leading-relaxed mb-4">
-<ul class="list-disc list-inside space-y-2 text-lg
-<li>Verificación de daños y correspondencia con el
-envío.</li>
-<li>Registro obligatorio de: producto, cantidad,
-fabricante, titular de registro, número de lote, fecha de vencimiento,
-transportadora, condiciones del vehículo y carga, fecha y hora de
-llegada.</li>
-<li>Productos dañados o inadecuados deben ser
-**identificados, aislados y comunicados** al remitente.</li>
-</ul>
-mb-3">Almacenamiento:</h3>
-leading-relaxed mb-4">
-<h3 class="text-2xl font-medium text-blue-600
-<ul class="list-disc list-inside space-y-2 text-lg
-<li>Debe cumplir con las **condiciones específicas**
-(temperatura, humedad, iluminación) indicadas por el fabricante y el
-reglamento.</li>
-<li>**Separación y aislamiento** de productos
-psicotrópicos, estupefacientes, termolábiles, y aquellos con embalajes
-deteriorados o sospecha de contaminación.</li>
-<li>Apilamiento adecuado, rotación de existencias
-(**FIFO - First In, First Out**), inventarios periódicos, y fácil
-identificación de lote y vencimiento.</li>
-<li>Productos no deben estar en contacto con el piso
-ni paredes. Prohibida la presencia de personas extrañas.</li>
-</ul>
-<h3 class="text-2xl font-medium text-blue-600
-mb-3">Abastecimiento y Distribución:</h3>
-<ul class="list-disc list-inside space-y-2 text-lg
-leading-relaxed mb-4">
-<li>Solo a **establecimientos habilitados** por la
-Autoridad Sanitaria.</li>
-<li>Sistema de **rastreabilidad** que permita
-reconstruir la trayectoria del producto y localizarlo.</li>
-<li>Registros de distribución que incluyan
-identificación del producto y destinatario final, conservados por
-**cinco años**
-.</li>
-</ul>
-<h3 class="text-2xl font-medium text-blue-600
-mb-3">Transporte:</h3>
-<ul class="list-disc list-inside space-y-2 text-lg
-leading-relaxed mb-4">
-<li>Garantizar que el transporte cumpla con las
-**Buenas Prácticas de Transporte de Productos Farmacéuticos**
-,
-manteniendo las condiciones específicas de temperatura.</li>
-</ul>
-<h3 class="text-2xl font-medium text-blue-600
-mb-3">Devoluciones y Reclamos:</h3>
-<ul class="list-disc list-inside space-y-2 text-lg
-leading-relaxed mb-4">
-<li>Los lotes devueltos (ventas canceladas, confusión,
-robo, daños) deben ser **evaluados y comunicados** al titular del
-registro.</li>
-<li>Reclamos por sospechas de calidad inician una
-investigación por parte del titular del registro.</li>
-<li>Productos con **plazo de validez expirado** deben
-ser identificados, separados y destruidos según procedimientos.</li>
-</ul>
-del Mercado (Recall):</h3>
-leading-relaxed mb-4">
-Autoridad Sanitaria.</li>
-<h3 class="text-2xl font-medium text-blue-600 mb-3">Retiro
-<ul class="list-disc list-inside space-y-2 text-lg
-<li>Decidido por el titular del registro o la
-<li>**Comunicación obligatoria** a la Autoridad
-Sanitaria y a los establecimientos afectados.</li>
-<li>Sistema de registro que permita la
-**identificación inmediata de destinatarios** para asegurar la
-eficacia del retiro.</li>
-<li>Los lotes afectados deben ser **inmediatamente
-segregados** en un área separada.</li>
-</ul>
-<h3 class="text-2xl font-medium text-blue-600
-mb-3">Productos Adulterados y Falsificados:</h3>
-<ul class="list-disc list-inside space-y-2 text-lg
-leading-relaxed mb-4">
-<li>Deben ser **inmediatamente separados** y
-claramente identificados como no comercializables.</li>
-<li>**Notificación inmediata** a la Autoridad
-Sanitaria y al titular del registro para su retiro del mercado y
-prohibición de comercialización.</li>
-</ul>
-mb-3">Autoinspección:</h3>
-leading-relaxed">
-<h3 class="text-2xl font-medium text-blue-600
-<ul class="list-disc list-inside space-y-2 text-lg
-<li>Obligatoria con una frecuencia **mínima anual** o
-ante deficiencias.</li>
-<li>Debe generarse un **relato documentado** con
-resultados, evaluaciones, conclusiones y acciones correctivas.</li>
-</ul>
-</section>
-<!-- Sección de Condiciones Específicas -->
-<section id="condiciones-especificas" class="bg-white p-6
-rounded-xl shadow-md mb-8 section-anchor">
-<h2 class="text-3xl font-semibold text-blue-700
-mb-4">Condiciones Específicas</h2>
-<h3 class="text-2xl font-medium text-blue-600 mb-3">Cadena
-de Frío (Inmunobiológicos, Sueros, etc.):</h3>
-<ul class="list-disc list-inside space-y-2 text-lg
-leading-relaxed mb-4">
-<li>Almacenamiento en **equipamiento frigorífico**
-(refrigeradores, cámaras frías, congeladores).</li>
-<li>**Control continuo de temperatura** (termógrafos,
-termómetros de máxima y mínima) con registros y alertas.</li>
-<li>Distribución de productos dentro de los equipos
-que permita la **libre circulación del aire frío**
-.</li>
-<li>Programación de ingresos y retiros para
-**minimizar variaciones de temperatura**
-.</li>
-<li>Equipamientos conectados a la red eléctrica y con
-**red alternativa de energía (generador)**
-.</li>
-<li>Sistema de **alarmas** para cualquier
-anormalidad.</li>
-<li>Personal familiarizado con técnicas de
-almacenamiento en frío y emergencias.</li>
-</ul>
-<h3 class="text-2xl font-medium text-blue-600
-mb-3">Productos de Control Especial (Psicotrópicos y
-Estupefacientes):</h3>
-<ul class="list-disc list-inside space-y-2 text-lg
-leading-relaxed">
-<li>Áreas de almacenamiento de **máxima seguridad**
-,
-aisladas de los demás productos.</li>
-<li>**Acceso restringido** solo a personal autorizado
-por el Director Técnico.</li>
-<li>Registros de entrada y salida específicos y de
-acuerdo con la **legislación sanitaria vigente**
-.</li>
-</ul>
-</section>
-</main>
-<!-- Pie de página -->
-<footer class="bg-blue-800 text-white p-6 text-center text-sm
-rounded-t-xl shadow-inner">
-<p>© 2025 Resumen Disposición 3475/2005. Todos los derechos
-reservados.</p>
-<p class="mt-2">Adaptado para fines informativos del texto
-oficial de la Presidencia de la Nación Argentina.</p>
-</footer>
+<body>
+
+    <header class="hero-header">
+        <h1>Disposición ANMAT N° 3475/05</h1>
+        <p>Guía Completa sobre las Buenas Prácticas de Distribución de Productos Farmacéuticos.</p>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#introduccion">Introducción</a>
+            <a href="#pilares">Pilares Fundamentales</a>
+            <a href="#almacenamiento">Almacenamiento Específico</a>
+            <a href="#aplicacion">Aplicación Práctica</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="introduccion">
+            <div class="section-title-container">
+                <h2>Introducción y Contexto</h2>
+            </div>
+            <div class="card">
+                <p>La Disposición ANMAT N° 3475/2005 es una normativa clave que aprueba e incorpora a la legislación argentina el "Reglamento Técnico Mercosur sobre Buenas Prácticas de Distribución de Productos Farmacéuticos" (Resolución Mercosur GMC N° 49/02).</p>
+                <p>Su principio fundamental es que el control sanitario de los medicamentos debe cubrir todo el proceso, desde la fabricación hasta la entrega al público, para garantizar que se conserven, transporten y manipulen adecuadamente, preservando su calidad, eficacia y seguridad. Se busca asegurar que los productos farmacéuticos, ya fabricados bajo estrictas normas, no sufran alteraciones en las etapas de almacenamiento y transporte.</p>
+            </div>
+        </section>
+
+        <section id="pilares">
+            <div class="section-title-container">
+                 <h2>Pilares Fundamentales de las BPD</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>1. Sistema de Calidad y Trazabilidad</h3>
+                    <p>La distribuidora debe tener un sistema que permita la trazabilidad de los productos para su localización, retiro del mercado y devolución. Esto se logra mediante:</p>
+                    <ul>
+                        <li>Procedimientos escritos y firmados por el Director Técnico para todas las operaciones.</li>
+                        <li>Registros de entrada y salida de productos conforme al reglamento.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>2. Personal Calificado</h3>
+                     <p>El recurso humano es central. Se requiere:</p>
+                    <ul>
+                        <li>Un Director Técnico/Farmacéutico Responsable que asume la responsabilidad técnica.</li>
+                        <li>Personal con calificaciones y experiencia necesarias, con atribuciones definidas por escrito.</li>
+                        <li>Capacitación inicial y continua sobre las BPD para todo el personal, la cual debe ser registrada.</li>
+                        <li>Prohibición de fumar, comer o beber en áreas operativas.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>3. Infraestructura Adecuada</h3>
+                    <p>Las instalaciones deben ser adecuadas para facilitar el mantenimiento, la limpieza y las operaciones. Se deben considerar las siguientes áreas necesarias:</p>
+                    <ul>
+                        <li>Recepción, Almacenamiento, Expedición y Administración.</li>
+                        <li>Área de Devolución/retiro del mercado.</li>
+                        <li>Vestuarios, sanitarios y áreas de descanso separadas de las áreas de almacenamiento.</li>
+                        <li>Control de iluminación, temperatura y humedad para no afectar los productos.</li>
+                        <li>Protección contra el ingreso de roedores, aves e insectos.</li>
+                    </ul>
+                </div>
+                
+                 <div class="card">
+                    <h3>4. Flujo Operativo Regulado</h3>
+                    <p>Cada etapa del proceso está normada:</p>
+                    <ul>
+                        <li><strong>Recepción:</strong> En un área separada , se examinan los embalajes y se verifica la correspondencia con el envío. Se registra detalladamente la recepción.</li>
+                        <li><strong>Almacenamiento:</strong> Se debe seguir la instrucción del fabricante , individualizar cada lote y expedirlos en orden cronológico de vencimiento.</li>
+                        <li><strong>Abastecimiento:</strong> Prohibida la entrega a establecimientos no habilitados por la Autoridad Sanitaria.</li>
+                        <li><strong>Transporte:</strong> Se debe garantizar que se realice conforme a las buenas prácticas, respetando las condiciones de temperatura requeridas.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>5. Gestión de Incidencias</h3>
+                    <p>El sistema debe poder manejar problemas eficazmente:</p>
+                    <ul>
+                        <li><strong>Devoluciones:</strong> Deben ser evaluadas por el Director Técnico en comunicación con el titular del registro.</li>
+                        <li><strong>Retiro del Mercado:</strong> El sistema debe permitir la identificación inmediata de los destinatarios del lote involucrado para asegurar un retiro eficaz. Los productos retirados se segregan en un área separada.</li>
+                        <li><strong>Productos Falsificados:</strong> Deben ser separados inmediatamente y se debe notificar a la Autoridad Sanitaria y al titular del registro.</li>
+                    </ul>
+                </div>
+                
+                 <div class="card">
+                    <h3>6. Autoinspección</h3>
+                    <p>Un pilar para la mejora continua.</p>
+                    <ul>
+                        <li>La empresa debe realizar autoinspecciones para evaluar el cumplimiento de las BPD.</li>
+                        <li>Debe realizarse con una frecuencia mínima anual o cuando se detecte una deficiencia.</li>
+                        <li>Se debe generar un informe con resultados, conclusiones y acciones correctivas adoptadas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="almacenamiento">
+             <div class="section-title-container">
+                <h2>Condiciones Específicas de Almacenamiento</h2>
+             </div>
+             <div class="card-container">
+                <div class="card">
+                    <h3>Ambiente Controlado (15°C a 30°C)</h3>
+                    <p>Para productos que se almacenan a temperatura ambiente, se deben observar exigencias clave:</p>
+                    <ul>
+                        <li>El local debe mantener una temperatura entre 15°C y 30°C.</li>
+                        <li>Las mediciones de temperatura deben ser constantes y registradas por escrito.</li>
+                        <li>Deben existir sistemas de alerta para detectar fallos en el aire acondicionado.</li>
+                        <li>Los productos no deben estar en contacto con el piso y deben estar distanciados de paredes y luz solar directa.</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Cadena de Frío (Inmunobiológicos y otros)</h3>
+                    <p>Estos productos son muy sensibles y requieren condiciones óptimas de temperatura para conservar su eficacia.</p>
+                    <ul>
+                        <li>El almacenamiento debe ser en equipamiento frigorífico como refrigeradores (2°C a 8°C), cámaras frías o congeladores (-20°C a -10°C).</li>
+                        <li>Deben ser controlados continuamente por termógrafos o termómetros de máxima y mínima.</li>
+                        <li>Es obligatorio poseer una red alternativa de energía (generador) y sistemas de alarma para fallas.</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Control Especial (Psicotrópicos y Estupefacientes)</h3>
+                    <p>Debido a sus características, sus áreas de almacenamiento son consideradas de máxima seguridad.</p>
+                     <ul>
+                        <li>Deben estar en áreas o compartimentos aislados de los demás productos.</li>
+                        <li>El acceso está restringido solamente al personal autorizado por el Director Técnico/Farmacéutico Responsable.</li>
+                        <li>Los registros de entrada y salida de estos productos se realizan de acuerdo con la legislación sanitaria específica.</li>
+                    </ul>
+                </div>
+             </div>
+        </section>
+
+        <section id="aplicacion">
+             <div class="section-title-container">
+                <h2>Aplicación Práctica y Utilidad</h2>
+             </div>
+             <div class="card">
+                <p>Para la sociedad, esta norma es una garantía de que el medicamento que llega a sus manos ha mantenido su integridad, seguridad y eficacia desde que fue fabricado. Para las empresas del sector farmacéutico, esta disposición no es una carga, sino un manual de operaciones que:</p>
+                 <ul>
+                    <li><strong>Protege la Salud Pública:</strong> Es la contribución esencial de la cadena de distribución para asegurar que el tratamiento del paciente sea efectivo y seguro.</li>
+                    <li><strong>Asegura la Calidad del Producto:</strong> Implementa un sistema que disminuye al máximo los factores que pueden incidir sobre la calidad de los fármacos.</li>
+                    <li><strong>Genera Confianza y Profesionalismo:</strong> Un distribuidor que cumple con las BPD es un eslabón confiable en la cadena de salud, protegiendo su negocio y la reputación de los fabricantes.</li>
+                    <li><strong>Armoniza el Mercado Regional:</strong> Facilita el comercio entre los países del MERCOSUR al establecer un estándar de calidad común y obligatorio.</li>
+                 </ul>
+             </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Esta página es una interpretación didáctica de la Disposición ANMAT N° 3475/05. La información ha sido extraída y citada del documento oficial.</p>
+        <p>Generado por IA para facilitar la comprensión.</p>
+    </footer>
+
 </body>
 </html>
